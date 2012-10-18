@@ -42,17 +42,19 @@
 					<div class='well sidebar-nav'>
 						<ul class='nav nav-list'>
 							<li class='nav-header'>Navigation</li>
-							<li class='active'><a href='#'>Home</a></li>
-							<li><a href='./colour-picker.html'>Leximosi Colour Picker</a></li>
+							<li><a href='./index.html'>Home</a></li>
+							<li class='active'><a href='#'>Leximosi Colour Picker</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class='span9'>
 					<div class='row-fluid'>
-						<div class='span4'>
+						<div id='font-colour-action'>
 							<h2>Colour Picker</h2>
 							<p>The "Leximosi Colour Picker" is a simple colour picker utilising jQuery and the HTML5 canvas object</p>
-							<p><a class='btn' href='./colour-picker.html'>View details &raquo;</a></p>
+
+							<h3>Demo</h3>
+							<div id='demo-font-colour-picker'></div>
 						</div>
 					</div>
 				</div>
@@ -67,7 +69,22 @@
 
 		</div>
 
-		<script src='http://code.jquery.com/jquery-latest.js'></script>
-		<script src='./lib/bootstrap/js/bootstrap.js'></script>
+		<script src='//code.jquery.com/jquery-latest.js'></script>
+		<script src='//raw.github.com/Leximosi/ColourPicker/master/lib/ColourPicker.js'></script>
+		<script>
+$(document).ready(function()
+{
+	$("#demo-font-colour-picker").LeximosiColourPicker({
+		callback: function(colourPicker) {
+			var ele = $('#font-colour-action'),
+			    hex = colourPicker.colourPicker._currentToHEX();
+
+			ele.css({
+				'color': hex
+			});
+		},
+	});
+});
+		</script>
 	</body>
 </html>
