@@ -6,8 +6,8 @@
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 		<meta name='author' content='Erik Frèrejean'>
 
-		<link href='./lib/bootstrap/css/bootstrap.css' rel='stylesheet'>
-		<link href='./lib/bootstrap/css/bootstrap-responsive.css' rel='stylesheet'>
+		<link href='./lib/bootstrap/docs/assets/css/bootstrap.css' rel='stylesheet'>
+		<link href='./lib/bootstrap/docs/assets/css/bootstrap-responsive.css' rel='stylesheet'>
 		<link href='./lib/google-code-prettify/prettify.css' rel='stylesheet'>
 
 		<style type="text/css">
@@ -109,11 +109,14 @@ $('#colour-picker-custom-action').LeximosiColourPicker({
 		</div>
 
 		<script src='//code.jquery.com/jquery-latest.js'></script>
+		<script src='//google-code-prettify.googlecode.com/svn/trunk/src/prettify.js'></script>
 		<script src='//raw.github.com/Leximosi/ColourPicker/master/lib/ColourPicker.js'></script>
-		<script src='./lib/google-code-prettify/prettify.js'></script>
+		<script src='./lib/bootstrap/docs/assets/js/bootstrap.js'></script>
+
 		<script>
-$(document).ready(function()
-{
+$(document).ready(function() {
+	prettyPrint();
+
 	$('#colour-picker-custom-action').LeximosiColourPicker({
 		events: {
 			picker: {
